@@ -1,5 +1,8 @@
 import ReactDOM from "react-dom";
 import {useState} from "react";
+import {saveAs} from 'file-saver'
+
+
 const Backdrop = ({clicky}) => {
   return (
     <div
@@ -21,6 +24,15 @@ const Memegenerator = ({meme}) => {
   });
 
   const [newmeme, setnewmeme] = useState(meme);
+
+
+const downloadhandler=(url)=>{
+    saveAs(url,'image.jpg')
+}
+
+
+
+
 
   const submithandler = async (e) => {
     e.preventDefault();
@@ -72,6 +84,9 @@ const Memegenerator = ({meme}) => {
 
       <button type="submit" className="btn">
         Get Meme
+      </button>
+      <button onClick={downloadhandler.bind(null,newmeme.url)} type="button" className="download-btn">
+        Download Meme
       </button>
     </form>
   );

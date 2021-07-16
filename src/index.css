@@ -28,7 +28,7 @@ input {
   border-radius: 10px;
   margin: 5px 4px;
   border: 2px solid rgb(90, 128, 0);
-  width:25%;
+  width: 25%;
 }
 
 input:focus {
@@ -51,6 +51,7 @@ input:focus {
   width: 70%;
   padding: 3px 7px;
   align-self: stretch;
+  background-color: rgba(6, 43, 49, 0.9);
 }
 
 .signlememe_imagecontainer {
@@ -85,10 +86,10 @@ img {
   color: turquoise;
   cursor: pointer;
 }
-.btn:hover,.btn:active{
+.btn:hover,
+.btn:active {
   background-color: rgb(19, 152, 185);
   color: whitesmoke;
-  
 }
 .input_box span {
   margin: 0 5px;
@@ -129,12 +130,12 @@ img {
   color: white;
   padding: 10px 4px;
 }
-.generator{
-  width:100%;
+.generator {
+  width: 100%;
   background-color: rgb(6, 78, 112);
   padding: 10px 5px;
   margin: 10px 0px;
-  color:rgb(8, 219, 209);
+  color: rgb(8, 219, 209);
   text-align: center;
   font-size: 3rem;
 }
@@ -145,5 +146,65 @@ img {
   width: 100%;
   height: 100vh;
   z-index: 20;
-  background-color:rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.loading {
+  border-radius: 50%;
+  border-top: 10px solid turquoise;
+  border-bottom: 10px solid turquoise;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 200px;
+  width: 200px;
+  animation: rotateloader 1s ease-in-out 0s infinite ;
+}
+
+.loading_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  margin: 10px 0px;
+}
+
+.download-btn{
+  padding:10px 15px;
+  margin:7px 0px;
+  background-color: rgb(8, 207, 158);
+  color:rgb(203, 224, 236);
+  border-radius: 10px;
+}
+
+.download-btn:hover{
+  background-color: rgb(8, 201, 235);
+  color:rgb(4, 53, 53)
+}
+
+
+@keyframes rotateloader {
+  0%{
+    transform:rotateZ(0deg);
+
+  }
+  
+  100%{
+    transform: rotateZ(360deg);
+
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  input {
+    width: 50%;
+  }
+  .btn {
+    margin: auto;
+  }
+  .meme {
+    flex: 0 0 100%;
+  }
 }
