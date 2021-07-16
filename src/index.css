@@ -135,10 +135,9 @@ img {
   width: 100%;
   background-color: rgb(6, 78, 112);
   padding: 10px 5px;
-  margin: 10px 0px;
   color: rgb(8, 219, 209);
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .style_backdrop {
   position: fixed;
