@@ -93,6 +93,7 @@ img {
 }
 .input_box span {
   margin: 0 5px;
+  color:white
 }
 .list {
   border-radius: 12px;
@@ -199,8 +200,10 @@ img {
 
 @media screen and (max-width: 600px) {
   input {
-    width: 50%;
+    width: 100%;
+    margin: 5px auto;
   }
+  
   .btn {
     margin: auto;
   }
